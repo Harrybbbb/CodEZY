@@ -6,6 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+//changes made for vercel deployment
 const cors = require('cors');
 // Allow all origins
 app.use(cors());
@@ -16,9 +17,10 @@ app.use(cors({
 
 const API_KEY = process.env.API_KEY
 
-app.post('/completions', async (req, res) => {
+app.post('https://cod-ezy-server.vercel.app/completions', async (req, res) => {
     const options = {
         method : 'POST',
+        mode: 'no-cors',
         headers: {
             "Authorization": `Bearer ${API_KEY}`,
             "Content-Type": "application/json"
