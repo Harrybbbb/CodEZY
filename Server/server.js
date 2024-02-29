@@ -6,6 +6,14 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const cors = require('cors');
+// Allow all origins
+app.use(cors());
+// Allow specific origin(s)
+app.use(cors({
+  origin: 'https://cod-ezy-server.vercel.app/'
+}));
+
 const API_KEY = process.env.API_KEY
 
 app.post('/completions', async (req, res) => {
