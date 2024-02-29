@@ -30,7 +30,7 @@ export default function Inputs() {
       }
     }
     try{
-      const response = await fetch('https://cod-ezy-server.vercel.app/completions', options)
+      const response = await fetch('http://localhost:8000/completions', options)
       const data = await response.json()
       setMessage(data.choices[0].message)
     }catch(error){
@@ -85,7 +85,7 @@ const currentChat = previousChats.filter(previousChat => previousChat.title === 
        <input type='text'
        className='user_textarea'
        placeholder='How can I help you...'
-       value={value}
+       value={value || ''}
        onChange={(e) => setValue(e.target.value)}
        />
        <button onClick={getMessages} className='send'><i className="pi pi-arrow-up"></i></button>

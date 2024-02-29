@@ -10,10 +10,9 @@ app.use(cors())
 
 const API_KEY = process.env.API_KEY
 
-app.post('https://cod-ezy-server.vercel.app/completions', async (req, res) => {
+app.post('/completions', async (req, res) => {
     const options = {
         method : 'POST',
-        mode: 'no-cors',
         headers: {
             "Authorization": `Bearer ${API_KEY}`,
             "Content-Type": "application/json"
