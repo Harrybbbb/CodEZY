@@ -214,3 +214,16 @@ input:focus{
   color: white;
   font-size: 10px;
 }
+@media only screen 
+   and (max-width : 768px) {
+   .fullweb{
+    display:none;
+   }
+   .mobile{
+    color: white;
+   }
+   .mobile p{
+    font-size: 30px;
+    font-family: var(--basic-font);
+   }
+}

@@ -17,6 +17,12 @@ function App() {
   const mainRef = useRef();
   return (
     <>
+    <div className='mobile'>
+      <p>PLS OPEN ON DESKTOP 
+        <br/>WORK FOR MOBILE VIEW IS ON THE WAY
+      </p>
+    </div>
+    <div className='fullweb'>
     <Navbar/>
     <Content/>
     <div className='scroll'>
@@ -35,6 +41,7 @@ function App() {
       <div className='left_footer'>
         <p>©All rights reserved|developed by <a href="https://harsh09.tiiny.site/">Harsh Birla</a></p>
       </div>
+    </div>
     </div>
     <Routes>
    <Route path="/About" element={<About/>} />
