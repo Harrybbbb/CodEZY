@@ -214,6 +214,9 @@ input:focus{
   color: white;
   font-size: 10px;
 }
+.mobile{
+  display: none;
+}
 @media only screen 
    and (max-width : 768px) {
    .fullweb{
@@ -221,6 +224,7 @@ input:focus{
    }
    .mobile{
     color: white;
+    display: block;
    }
    .mobile p{
     font-size: 30px;
